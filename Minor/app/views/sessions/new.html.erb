@@ -1,0 +1,9 @@
+<div style="text-align: center">
+<%= form_for(:session, url: login_path) do |s| %>
+<%= s.email_field :email, :placeholder => "Email" %><br>
+<%= s.password_field :password, :placeholder => "Password" %><br>
+</div>
+<div style="text-align: center">
+<%= s.submit "Login" %><br>
+<% end %>
+</div>

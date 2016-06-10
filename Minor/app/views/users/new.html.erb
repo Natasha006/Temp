@@ -1,0 +1,11 @@
+<div style="text-align: center">
+<%= form_for :users do |u|%>
+<%= u.text_field :first_name, :placeholder => "First Name" %><br>
+<%= u.text_field :last_name, :placeholder => "Last Name" %><br>
+<%= u.email_field :email, :placeholder => "Email" %><br>
+<%= u.password_field :password, :placeholder => "Password" %><br>
+</div>
+<div style="text-align: center">
+<%= u.submit "Create an account" %>
+<% end %>
+</div>

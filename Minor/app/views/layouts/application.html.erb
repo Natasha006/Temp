@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minor</title>
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div>
+<%= yield %>
+<% if current_user %>
+<%= current_user.email %>
+<%= link_to "Logout", delete_path() %>
+<% else %>
+<%= link_to "Log in", 'login' %>
+<%= link_to "Signup", 'signup' %>
+<% end %>
+</div>
+</body>
+</html>
